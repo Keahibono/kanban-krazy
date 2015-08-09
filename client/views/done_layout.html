@@ -1,0 +1,18 @@
+
+
+<template name="dones">
+  <div class="dones">
+    {{#each dones}}
+      {{>done}}
+    {{/each}}
+  </div>
+</template>
+
+
+<template name="done">
+  <div class="done">
+    <div class="title">{{title}}</div>
+    <div class="description">{{description}}</div>
+  </div>
+</template>
+

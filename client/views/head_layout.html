@@ -1,0 +1,35 @@
+<head>
+  <title>Kanban Bored</title>
+</head>
+<body>
+
+</body>
+<template name="nav">
+  <nav>
+    <ul>
+      <li>
+        <a href="/"> Home </a>
+      </li>
+      <li>
+        <a href="/todo" id="todo"> To Do </a>
+      </li>
+      <li>
+        <a href="/progress" id="progress"> In Progress </a>
+      </li>
+      <li>
+        <a href="/done" id="done"> Done </a>
+      </li>
+    </ul>
+  </nav>
+    <div class="input">
+  <span>
+    <input type="text" id="title" maxlength="40">
+    <input type="text" id="description" maxlength="140">
+  </span>
+  <span>
+    <a href="#" id="save"> Save </a>
+  </span>
+  <span></span>
+  </div>
+  {{> yield}}
+</template>
