@@ -1,90 +1,107 @@
-/* CSS declarations go here */
-html, body{
-  height:100%;
-  background-color: #AA3939;
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+  }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+[class*="column"]+[class*="column"]:last-child {
+    float: left;
 }
 
-a{
-  text-decoration: none;
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-h1{
-  color:#fff;
-  text-align: center;
+.button{
+  background-color: orange;
 }
 
-.input{
-  width:100%;
-  text-align: center;
-  margin: 25px;
+.dropzone {
+  background-color: #ccc;
+  border: dashed 4px transparent;
+  border-radius: 4px;
+  margin: 10px;
+  max-width: 300px;
+  padding: 10px;
+  transition: background-color 0.3s;
+  margin: auto;
 }
 
-.input span{
-
-  margin-left: 10px;
-  width:500px;
-  height: 30px;
-  font-size:20px;
-  margin:0;
+.drop-active {
+  border-color: #aaa;
 }
 
-.input > span > #save{
-  padding: 5px 10px;
-  font-size: 24px;
-  text-align: center;
-  background-color: #D46A6A;
+.drop-target {
+  background-color: #29e;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.drag-drop {
+  display: inline-block;
+  min-width: 40px;
+  padding: 2em 0.5em;
+
   color: #fff;
+  background-color: #29e;
+  border: solid 2px #fff;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+
+  transition: background-color 0.3s;
 }
 
-.notes{
-  display: -webkit-flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.note{
-  border-radius: 10px;
-  border: solid 2px #550000;
-  display:flex;
-  align-content:center;
-  justify-content: center;
-  flex-direction: row;
-  background-image: url("/images/post_it.png");
-  width: 300px;
-  height:227px;
-  text-align: center;
-  margin: 20px;
-}
-
-.note > .message{
-  width:100%;
-  align-self:center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  margin:10px 35px;
-}
-
-.note > .delete{
-  color:#550000;
-  padding:10px;
-  align-self: flex-start;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-size: 20px;
-}
-
-ul {
-margin-left: auto;
-margin-right: auto;
-padding:0;
-}
-
-li {
-width:100px;
-height:50px;
-float:left;
-color:#191919;
-text-align:center;
-overflow:hidden;
+.drag-drop.can-drop {
+  color: #000;
+  background-color: #4e4;
 }

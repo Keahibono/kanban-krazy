@@ -3,14 +3,14 @@
 <template name="todos">
   <div class="todos">
     {{#each todos}}
-      {{>task}}
+      {{>todo}}
     {{/each}}
   </div>
 </template>
 
 
-<template name="task">
-  <div class="task">
+<template name="todo">
+  <div class="todo">
     <div class="title">{{title}}</div>
     <div class="description">{{description}}</div>
   </div>

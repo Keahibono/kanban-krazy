@@ -6,6 +6,20 @@ Meteor.startup(function(){
       category: "todo",
       show: true,
       added: Date.now()
+    },
+    {
+      title: "second Note ",
+      description: "2nd thing to do is the to do list",
+      category: "progress",
+      show: true,
+      added: Date.now()
+    },
+    {
+      title: "this one is done",
+      description: "Final",
+      category: "done",
+      show: true,
+      added: Date.now()
     });
   }
 

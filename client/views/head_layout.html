@@ -1,35 +1,35 @@
+
 <head>
   <title>Kanban Bored</title>
 </head>
 <body>
-
 </body>
 <template name="nav">
-  <nav>
-    <ul>
-      <li>
-        <a href="/"> Home </a>
-      </li>
-      <li>
-        <a href="/todo" id="todo"> To Do </a>
-      </li>
-      <li>
-        <a href="/progress" id="progress"> In Progress </a>
-      </li>
-      <li>
-        <a href="/done" id="done"> Done </a>
-      </li>
-    </ul>
-  </nav>
-    <div class="input">
-  <span>
-    <input type="text" id="title" maxlength="40">
-    <input type="text" id="description" maxlength="140">
-  </span>
-  <span>
-    <a href="#" id="save"> Save </a>
-  </span>
-  <span></span>
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="nav-bar right">
+        <ul class="button-group">
+          <li><a href="/" class="button">Home</a></li>
+          <li><a href="/todo" class="button">To Do</a></li>
+          <li><a href="/progress" class="button">In Progress</a></li>
+          <li><a href="/done" class="button">Done</a></li>
+        </ul>
+      </div>
+      <h1>Kanban <small>Write It Down, Get It Done.</small></h1>
+      <hr/>
+    </div>
   </div>
-  {{> yield}}
+  <div class="row">
+    <div class="large-4 columns dropzone">To Do
+      <!-- <ul>
+        {{#each todos}}
+          {{> todo}}
+        {{/each}}
+      </ul> -->
+    </div>
+    <div class="large-4 columns dropzone">In Progress</div>
+    <div class="large-4 columns dropzone">Done</div>
+  </div>
+
+  {{>yield}}
 </template>

@@ -33,7 +33,7 @@ Template.progresses.destroyed = function(){
 
 Template.progresses.helpers({
   progresses: function(){
-    return TaskCollection.find().fetch();
+    return TaskCollection.find({ category: "progress"});
   }
 });
 
@@ -48,34 +48,3 @@ Template.dones.rendered = function(){
 Template.dones.destroyed = function(){
   console.log('destroyed');
 };
-
-
-
-Template.todos.helpers({
-  dones: function(){
-    return TaskCollection.find().fetch();
-  }
-});
-
-Template.task.created = function() {
-  console.log('created');
-};
-
-Template.task.rendered = function(){
-
-};
-
-Template.task.destroyed = function(){
-
-};
-
-Template.task.helpers({
-
-  }
-);
-
-Template.task.events({
-
-});
-
-
