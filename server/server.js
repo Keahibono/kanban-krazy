@@ -6,22 +6,22 @@ Meteor.startup(function(){
       category: "todo",
       show: true,
       added: Date.now()
-    },
-    {
+    });
+
+    TaskCollection.insert({
       title: "second Note ",
       description: "2nd thing to do is the to do list",
       category: "progress",
       show: true,
       added: Date.now()
-    },
-    {
-      title: "this one is done",
-      description: "Final",
+    });
+
+    TaskCollection.insert({
+      title: "third ",
+      description: "3nd thing to do is the to do list",
       category: "done",
       show: true,
       added: Date.now()
     });
   }
-
-
 });

@@ -8,14 +8,6 @@
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
-[class*="column"]+[class*="column"]:last-child {
-    float: left;
-}
-
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -61,17 +53,29 @@ table {
   border-spacing: 0;
 }
 
+body {
+  background-image: url("http://jessijaejoplin.com/wp-content/uploads/2014/02/corkboard.jpg");
+}
+
+h1 {
+  color: yellow;
+  font-size: 50px;
+}
+
 .button{
   background-color: orange;
 }
 
 .dropzone {
+  /*background-image: url("http://jessijaejoplin.com/wp-content/uploads/2014/02/corkboard.jpg");*/
   background-color: #ccc;
-  border: dashed 4px transparent;
+  border: dashed 4px yellow;
   border-radius: 4px;
-  margin: 10px;
-  max-width: 300px;
-  padding: 10px;
+  margin: 0px;
+  /*max-width: 300px;*/
+  max-height: 600px;
+  min-height: 300px;
+  padding:  0px;
   transition: background-color 0.3s;
   margin: auto;
 }
@@ -104,4 +108,5 @@ table {
 .drag-drop.can-drop {
   color: #000;
   background-color: #4e4;
+  z-index: 10;
 }

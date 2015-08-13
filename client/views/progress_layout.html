@@ -3,14 +3,14 @@
 <template name="progresses">
   <div class="progresses">
     {{#each progresses}}
-      {{>progress}}
+      {{>prog}}
     {{/each}}
   </div>
 </template>
 
 
-<template name="progress">
-  <div class="progress">
+<template name="prog">
+  <div class="prog draggable drag-drop">
     <div class="title">{{title}}</div>
     <div class="description">{{description}}</div>
   </div>

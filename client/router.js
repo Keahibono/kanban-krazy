@@ -1,6 +1,6 @@
 Router.route("/", function(){
   this.layout("nav");
-  this.render();
+  this.render("home");
 });
 
 Router.route("/todo", function(){
