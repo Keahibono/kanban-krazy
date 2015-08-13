@@ -65,3 +65,25 @@ Template.dones.helpers({
 Template.dones.events({
 
 });
+
+Template.homes.created = function() {
+  console.log('created');
+};
+
+Template.homes.rendered = function(){
+  console.log('rendered');
+};
+
+Template.homes.destroyed = function(){
+  console.log('destroyed');
+};
+
+Template.homes.helpers({
+  homes: function(){
+    return TaskCollection.find().fetch();
+  }
+});
+
+Template.homes.events({
+
+});

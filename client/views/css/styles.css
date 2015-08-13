@@ -66,17 +66,21 @@ h1 {
   background-color: orange;
 }
 
-.dropzone {
-  /*background-image: url("http://jessijaejoplin.com/wp-content/uploads/2014/02/corkboard.jpg");*/
-  background-color: #ccc;
-  border: dashed 4px yellow;
-  border-radius: 4px;
-  margin: 0px;
-  /*max-width: 300px;*/
-  max-height: 600px;
-  min-height: 300px;
-  padding:  0px;
+.large-4.columns {
+  min-height: 600px;
   transition: background-color 0.3s;
+}
+
+.dropzone {
+  opacity: 0.5;
+  background-color: #ccc;
+
+  border-radius: 10px;
+  margin: 0px;
+  max-height: 600px;
+  min-height: 600px;
+  padding:  0px;
+
   margin: auto;
 }
 
@@ -94,9 +98,8 @@ h1 {
   display: inline-block;
   min-width: 40px;
   padding: 2em 0.5em;
-
   color: #fff;
-  background-color: #29e;
+  background-color: red;
   border: solid 2px #fff;
 
   -webkit-transform: translate(0px, 0px);

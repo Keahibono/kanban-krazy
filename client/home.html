@@ -1,14 +1,14 @@
-<template name="home">
-
-<div class="row">
-    <div class="large-4 columns dropzone todos">
-      {{> todos}}
-    </div>
-    <div class="large-4 columns dropzone todos">
-      {{> progresses}}
-    </div>
-    <div class="large-4 columns dropzone todos">
-      {{> dones}}
-    </div>
+<template name="homes">
+  <div class="row dropzone">
+  {{#each homes}}
+    {{>home}}
+  {{/each}}
   </div>
-  </template>
+</template>
+
+<template name="home">
+  <div class="drag-drop draggable">
+    <div class="title">{{title}}</div>
+    <div class="description">{{description}}</div>
+  </div>
+</template>

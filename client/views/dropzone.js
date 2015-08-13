@@ -75,7 +75,7 @@ interact('.dropzone').dropzone({
     // remove the drop feedback style
     event.target.classList.remove('drop-target');
     event.relatedTarget.classList.remove('can-drop');
-    //event.relatedTarget.textContent = 'Dragged out';
+
   },
   ondrop: function (event) {
     //event.relatedTarget.textContent = 'Dropped';
