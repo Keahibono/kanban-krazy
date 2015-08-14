@@ -63,6 +63,24 @@ h1 {
   font-style: Tahoma;
 }
 
+.title{
+  color: red;
+  text-align: center;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.description{
+  text-align: center;
+  max-width: 140px;
+  margin-top: 10px;
+}
+
+.list{
+  max-width: 300px;
+  margin: auto;
+}
+
 .button{
   background-color: orange;
 }
@@ -72,9 +90,12 @@ h1 {
   transition: background-color 0.3s;
 }
 
+.todo{
+  float: left;
+}
+
 .dropzone {
-  opacity: 0.5;
-  background-color: #ccc;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   margin: 0px;
   max-height: 600px;
@@ -96,19 +117,24 @@ h1 {
 .drag-drop {
   display: inline-block;
   min-width: 40px;
-  padding: 2em 0.5em;
-  color: #fff;
-  background-color: red;
-  border: solid 2px #fff;
+  min-height: 200px;
+  padding: 1em;
+  color: #000;
+  background-image: url("http://www.skippack.org/postit.png");  /*green*/
+    /* blue post-it    url("http://e08595.medialib.glogster.com/espeteacher/media/5f/5fdaf9ba3c5f01d230dcfe02d0c822c7d8fbf994/postit-25.png")*/
+    /* yellow post-it url("http://www.skippack.org/postit.png")  */
+    /* purple post-it url("http://www.clker.com/cliparts/r/o/x/t/p/y/purple-postit-hi.png")  */
+    /* green url("http://searchable.us/images/map/EMP000000001.png") */
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
 
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
-
-  transition: background-color 0.3s;
 }
 
 .drag-drop.can-drop {
   color: #000;
-  background-color: #4e4;
+  /*background-color: #4e4;*/
   z-index: 10;
 }
