@@ -101,14 +101,33 @@ h1 small {
   border-radius: 4px;;
 }
 
-.large-4.columns {
-  min-height: 600px;
+
+/*.dropzone {
   transition: background-color 0.3s;
+}*/
+
+#todoZone{
+height: 300px;
+}
+
+#progressZone{
+height: 300px;
+}
+
+#doneZone{
+height: 300px;
 }
 
 .dropzone {
+  background-color: #ccc;
+  border: dashed 4px transparent;
+  border-radius: 4px;
+  margin: 10px auto 30px;
+  padding: 10px;
+  width: 80%;
   transition: background-color 0.3s;
 }
+
 
 .bg {
   background-color: rgba(255, 255, 255, 0.5);
@@ -151,6 +170,5 @@ h1 small {
 
 .drag-drop.can-drop {
   color: #000;
-  /*background-color: #4e4;*/
   z-index: 10;
 }
