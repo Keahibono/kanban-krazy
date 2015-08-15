@@ -18,13 +18,27 @@
       <h1>Kanban <small>Write It Down, Get It Done.</small></h1>
       <hr/>
     </div>
+    {{>user}}
   </div>
 
 {{> yield}}
 
-
-
-
 </template>
 
+<template name="user">
+  {{#if currentUser}}
+    {{> dashboard}}
+    {{>form}}
+  {{else}}
+    {{>login}}
+  {{/if}}
+</template>
+
+<template name="form">
+  <form class="new-task">
+    <input type="text" name="title" placeholder="To Do Task">
+    <input type="text" name="description" placeholder="Details of Task">
+    <input id="submitTask" type="submit" value="submit">
+  </form>
+</template>
 

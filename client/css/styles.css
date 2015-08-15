@@ -60,7 +60,12 @@ body {
 h1 {
   color: yellow;
   font-size: 50px;
-  font-style: Tahoma;
+  font-family: Tahoma, Arial;
+}
+
+h1 small {
+  color: white;
+  font-size: 25px;
 }
 
 .title{
@@ -85,16 +90,27 @@ h1 {
   background-color: orange;
 }
 
+.delete {
+  float: right;
+  font-weight: bold;
+  background: #DE4F4F  ;
+  color: #FFF;
+  font-size: 1em;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;;
+}
+
 .large-4.columns {
   min-height: 600px;
   transition: background-color 0.3s;
 }
 
-.todo{
-  float: left;
+.dropzone {
+  transition: background-color 0.3s;
 }
 
-.dropzone {
+.bg {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   margin: 0px;

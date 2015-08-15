@@ -1,4 +1,5 @@
 Meteor.startup(function(){
+
   if(TaskCollection.find().fetch().length === 0){
     TaskCollection.insert({
       title: "First Note",

@@ -1,19 +1,36 @@
+Router.configure({
+  layoutTemplate: "nav"
+});
+
+Router.onBeforeAction(function (){
+    if (! Meteor.userId()){
+      this.render('/login');
+    } else {
+      this.render('/');
+    }
+    this.next();
+})
+
 Router.route("/", function(){
-  this.layout("nav");
   this.render("homes");
 });
 
 Router.route("/todo", function(){
-  this.layout("nav");
   this.render("todos");
 });
 
 Router.route("/progress", function(){
-  this.layout("nav");
   this.render("progresses");
 });
 
 Router.route("/done", function(){
-  this.layout("nav");
   this.render("dones");
+});
+
+Router.route("/login", function(){
+  this.render("login");
+});
+
+Router.route('/homes', function () {
+  this.render('homes');
 });

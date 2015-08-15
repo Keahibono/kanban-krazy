@@ -1,17 +1,19 @@
 <template name="homes">
-  <div class="row dropzone">
+  <div class="row bg">
     {{#each homes}}
       {{>home}}
     {{/each}}
-    <div class="todo"></div>
-    <div class="prog"></div>
-    <div class="done"></div>
+    <ul class="sortable" id="sortable">To Do List</ul>
+    <ul class="sortable" id="sortable2">In Progress</ul>
+    <ul class="sortable" id="sortable3">Done</ul>
   </div>
+
 </template>
 
 <template name="home">
-  <div class="drag-drop draggable">
+  <li class="drag-drop draggable">
     <div class="title">{{title}}</div>
     <div class="description">{{description}}</div>
-  </div>
+    <button class="delete">Delete</button>
+  </li>
 </template>
