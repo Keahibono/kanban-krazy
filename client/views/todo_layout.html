@@ -1,20 +1,20 @@
 
 
 <template name="todos">
-  <div class="list dropzone">
+  <div class="dropzone list todo" id="todo">
     {{#each todos}}
       {{>todo}}
     {{/each}}
-  </div>
-  <div class="dropzone delete">
   </div>
 </template>
 
 
 <template name="todo">
   <div class="draggable drag-drop">
+    <div class='hidden'>{{_id}}</div>
     <div class="title">{{title}}</div>
     <div class="description">{{description}}</div>
+    <div class="delete">Delete</div>
   </div>
 </template>
 

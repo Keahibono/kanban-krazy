@@ -45,7 +45,7 @@ Template.progresses.events({
 });
 
 Template.dones.created = function() {
-  console.log('created');
+
 };
 
 Template.dones.rendered = function(){
@@ -72,6 +72,8 @@ Template.homes.created = function() {
 
 Template.homes.rendered = function(){
 
+
+
 };
 
 Template.homes.destroyed = function(){
@@ -79,14 +81,16 @@ Template.homes.destroyed = function(){
 };
 
 Template.homes.helpers({
-  homes: function(){
-    return TaskCollection.find().fetch();
-  }
+
 });
 
-Template.home.events({
-  'click .toggle-checked': function(){
-      TaskCollection.update(this._id, {$set: {checked: !this.checked}}); //whats current value of this.check checks value and updates
+Template.homes.events({
+  // 'click .toggle-checked': function(){
+  //     TaskCollection.update(this._id, {$set: {checked: !this.checked}}); //whats current value of this.check checks value and updates
+  //   },
+    'ondrop': function(event){
+      var id = TaskCollection.find(this._id);
+      console.log(id);
     },
 
     'click .delete': function(){ //this is an object need a comma
@@ -132,6 +136,7 @@ Template.form.events({
         user: uid,
         title : title,
         description: description,
+        category: "todo",
         createdAt: new Date()
       });
 

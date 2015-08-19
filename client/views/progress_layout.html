@@ -1,20 +1,20 @@
 
 
 <template name="progresses">
-  <div class="progresses list">
+  <div class="dropzone list prog" id="progress">
     {{#each progresses}}
       {{>prog}}
     {{/each}}
-  </div>
-  <div class="dropzone delete">
   </div>
 </template>
 
 
 <template name="prog">
-  <div class="prog draggable drag-drop">
+  <div class="draggable drag-drop">
+    <div class='hidden'>{{_id}}</div>
     <div class="title">{{title}}</div>
     <div class="description">{{description}}</div>
+    <div class="delete">Delete</div>
   </div>
 </template>
 

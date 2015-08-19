@@ -68,6 +68,10 @@ h1 small {
   font-size: 25px;
 }
 
+.hidden{
+  display:none;
+}
+
 .title{
   color: red;
   text-align: center;
@@ -107,30 +111,34 @@ h1 small {
 }*/
 
 #todoZone{
-height: 300px;
+max-width: 400px;
+height: 500px;
+
 }
 
 #progressZone{
-height: 300px;
+max-width: 400px;
+height: 500px;
+
 }
 
 #doneZone{
-height: 300px;
+max-width: 400px;
+height: 500px;
 }
 
 .dropzone {
-  background-color: #ccc;
-  border: dashed 4px transparent;
-  border-radius: 4px;
-  margin: 10px auto 30px;
-  padding: 10px;
-  width: 80%;
+  background-color: rgba(255, 255, 255);
+  border: dashed 4px #0f0;
+  border-radius: 10px;
+  margin: auto;
+  padding: 5px;
+  min-height: 300px;
   transition: background-color 0.3s;
 }
 
 
 .bg {
-  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   margin: 0px;
   max-height: 600px;
@@ -144,14 +152,14 @@ height: 300px;
 }
 
 .drop-target {
-  background-color: #29e;
+  /*background-color: #29e;*/
   border-color: #fff;
   border-style: solid;
 }
 
 .drag-drop {
   display: inline-block;
-  min-width: 40px;
+  min-width: 150px;
   min-height: 200px;
   padding: 1em;
   color: #000;
@@ -171,4 +179,5 @@ height: 300px;
 .drag-drop.can-drop {
   color: #000;
   z-index: 10;
+  /*position: fixed;*/
 }
